@@ -14,6 +14,7 @@ class RegController extends Controller
         $Tdata= new Student;
 
         // $Tdata->Id=$req->input('');
+
         $Tdata->Name=$req->input('Name');
         $Tdata->LastName=$req->input('LastName');
         $Tdata->Email=$req->input('Email');
@@ -22,14 +23,20 @@ class RegController extends Controller
         $Tdata->State=$req->input('State');
         $Tdata->Pincode=$req->input('Pincode');
 
-        if($req->hasfile('image')){
-            $file = $req ->file('image');
-            $extension = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $extension;
-            $file->move('storage/images', $filename);
-            $Tdata->image = $filename;
-        
-        } 
+        $image = $req->file('image');
+        $extension = $file->getClientOriginalExtension();
+        $imageName = time() . '.' . $extension;
+        $image->move('storage/images', $imageName);
+        $Tdata->image = $imageName;
+
+        // if($req->hasfile('image')){
+            // $file = $req ->file('image');
+            // $extension = $file->getClientOriginalExtension();
+            // $filename = time() . '.' . $extension;
+            // $file->move('storage/images', $filename);
+            // $Tdata->image = $filename;
+        // print_r ($filename);
+        // } 
         // else {
         //     return $req ; 
         //     $Tdata->image = '';
@@ -41,8 +48,4 @@ class RegController extends Controller
         $req->Session()->flash('status','Student details submited succesfully');
         return redirect('student-details');
     }
-
-
-
-
-}
+ }

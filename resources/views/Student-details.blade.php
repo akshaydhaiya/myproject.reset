@@ -20,16 +20,16 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Images</th>
-      <th scope="col">Email</th>
-      <th scope="col">Address</th>
-      <th scope="col">City</th>
-      <th scope="col">State</th>
-      <th scope="col">Pincode</th>
-      <th scope="col">Oprations</th>
+      <th scope="col">{{ __('msg.ID')}} </th>
+      <th scope="col">{{ __('msg.Name')}}</th>
+      <th scope="col">{{ __('msg.Last Name')}}</th>
+      <th scope="col">{{ __('msg.Images')}}</th>
+      <th scope="col">{{ __('msg.Email')}}</th>
+      <th scope="col">{{ __('msg.Address')}}</th>
+      <th scope="col">{{ __('msg.City')}}</th>
+      <th scope="col">{{ __('msg.State')}}</th>
+      <th scope="col">{{ __('msg.Pincode')}}</th>
+      <th scope="col">{{ __('msg.Oprations')}}</th>
       
     </tr>
   </thead>
@@ -41,7 +41,7 @@
       <th scope="row">{{$item->Id}}</th>
       <td>{{$item->Name}}</td>
       <td>{{$item->LastName}}</td>
-      <td><img src="{{URL::asset('storage/images/' . $item->image)}}" alt="image" width="100" height="100"></td>
+      <td><img src="{{URL::asset('storage/images/' . $item->image)}}" alt="image" width="50" height="50"></td>
       <td>{{$item->Email}}</td>
       <td>{{$item->Address}}</td>
       <td>{{$item->City}}</td>

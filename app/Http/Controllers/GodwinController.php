@@ -71,6 +71,17 @@ $affected = DB::table('Students')
 ->where('Id',  $NewId=$req->input('Id'))
               ->update(['Name' =>$req ->  input('Name'),
               'LastName'       =>$req ->  input('LastName'),
+            //   'image'          =>$req ->  input('image'),
+            //   if($req->hasfile('image')){
+            //     $file = $req ->file('image');
+            //     $extension = $file->getClientOriginalExtension();
+            //     $filename = time() . '.' . $extension;
+            //     $file->move('uploads/employe', $filename);
+            //     $employe->image = $filename;
+            //   }
+
+
+              
               'Email'          =>$req ->  input('Email'),
               'Address'        =>$req ->  input('Address'),
               'City'           =>$req ->  input('City'),

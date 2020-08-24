@@ -15,7 +15,7 @@
 </style>
 
 </head>
-<div class="frame">
+<div class="frame"> 
 <h1>EDIT form</h1><br>
 
 <form action="edit" method="post">
@@ -30,6 +30,12 @@
     <div class="form-group col-md-6">
       <label >Last Name</label>
       <input type="text" class="form-control" name="LastName"required value="{{$data->LastName}}" >
+    </div>
+
+    <div class="form-group d-flex flex-column , form-group col-md-12">
+      <label >Upload your Image</label>
+      <input type="file" name="image">
+      
     </div>
     <label >Email</label>
       <input type="email" class="form-control" name="Email" required value="{{$data->Email}}">

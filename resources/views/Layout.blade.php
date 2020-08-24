@@ -19,10 +19,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link active" href="godwin">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-link" href="student-registration">Student registration</a>
-      <a class="nav-link" href="student-details">Student details</a>
-      <a class="nav-link" href="logout">Logout</a>
+      <a class="nav-link active" href="godwin">{{ __('msg.Home')}}<span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="student-registration">{{ __('msg.Student registration')}}</a>
+      <a class="nav-link" href="student-details">{{ __('msg.Student details')}}</a>
+      <a class="nav-link" href="logout">{{ __('msg.Logout')}}</a>
       
       
     </div>
